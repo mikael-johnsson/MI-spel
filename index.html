@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text_spel</title>
+  </head>
+  <body>
+    <main>
+      <div class="container" id="left-container"></div>
+      <div class="container" id="middle-container">
+        <div id="world"></div>
+      </div>
+      <div class="container" id="right-container">
+        <div class="key-container">
+          <button class="key" id="up-key" data-movement="-3">UP</button>
+          <button class="key" id="right-key" data-movement="1">RIGHT</button>
+          <button class="key" id="down-key" data-movement="3">DOWN</button>
+          <button class="key" id="left-key" data-movement="-1">LEFT</button>
+        </div>
+          <div class="stat-container">
+            <h3>Hero stats</h3>
+            <div id="health"></div>
+            <div id="backpack"></div>
+          </div>
+          <div id="tile-info-container">
+
+          </div>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
