@@ -1,6 +1,3 @@
-// import { tradeObjects } from "../main";
-
-import { updateHeroLocation } from "./heroMovement";
 
 /**
  * Displays tiles surface and plant on screen
@@ -40,12 +37,7 @@ export const displayTileProps = (hero) => {
       }
 
       pickUpButton.addEventListener("click", () => {
-        hero.bag.push(item);
-
-        const i = tile.objects.indexOf(item);
-        tile.objects.splice(i, 1);
-        displayBackpack(hero);
-        displayTileProps(hero);
+        pickUpItem(hero, item, tile);
       });
 
       row.appendChild(object);
@@ -54,6 +46,15 @@ export const displayTileProps = (hero) => {
     }
   });
 };
+
+const pickUpItem = (hero, item, tile) => {
+  hero.bag.push(item);
+
+  const i = tile.objects.indexOf(item);
+  tile.objects.splice(i, 1);
+  displayBackpack(hero);
+  displayTileProps(hero);
+}
 
 /**
  * display life and strength stats on screen
@@ -90,14 +91,7 @@ export const displayBackpack = (hero) => {
     dropButton.innerHTML = "drop item";
 
     dropButton.addEventListener("click", () => {
-      const i = hero.bag.indexOf(item);
-      hero.bag.splice(i, 1);
-      
-      const currTile = hero.location
-      currTile.objects.push(item)
-
-      displayTileProps(hero)      
-      displayBackpack(hero);
+      dropItem(hero, item, );
     });
 
     row.appendChild(itemDiv);
@@ -105,3 +99,14 @@ export const displayBackpack = (hero) => {
     container.appendChild(row);
   });
 };
+
+const dropItem = (hero, item) => {
+  const i = hero.bag.indexOf(item);
+  hero.bag.splice(i, 1);
+  
+  const currTile = hero.location
+  currTile.objects.push(item)
+
+  displayTileProps(hero)      
+  displayBackpack(hero);
+}
