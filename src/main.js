@@ -3,6 +3,8 @@ import { placeHero, updateHeroLocation } from './functions/heroMovement'
 import { Hero } from './models/hero'
 import { Tile } from './models/tile'
 import { World } from './models/world'
+import "bootstrap/dist/css/bootstrap.min.css";
+import * as bootstrap from "bootstrap";
 import './style.scss'
 
 //find world container

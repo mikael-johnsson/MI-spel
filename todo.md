@@ -20,3 +20,7 @@ create a start tile, safe to stand on
 
 maybe export hero object to be able to not use props in every function
 
+style site with bootstrap
+
+create variables with scss
+
