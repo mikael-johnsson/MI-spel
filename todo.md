@@ -24,3 +24,8 @@ style site with bootstrap
 
 create variables with scss
 
+bug: when hero standing on left edge, left button takes the user up to the right
+
+add icon for object in tile
+
+add text under world? for the game experience?

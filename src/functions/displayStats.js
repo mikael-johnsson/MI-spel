@@ -1,5 +1,7 @@
 // import { tradeObjects } from "../main";
 
+import { updateHeroLocation } from "./heroMovement";
+
 /**
  * Displays tiles surface and plant on screen
  * Adjust to accustom several plants and objects
@@ -22,7 +24,6 @@ export const displayTileProps = (hero) => {
   container.appendChild(surface);
   container.appendChild(plant);
 
-  // this condition needs to be done better, might brake after trades
   tile.objects.forEach((item) => {
     if (item !== "") {
       const row = document.createElement("div");
@@ -72,7 +73,6 @@ export const displayHealth = (hero) => {
  * loop through the bag and display on screen
  */
 export const displayBackpack = (hero) => {
-  const currTile = hero.location;
   const container = document.getElementById("backpack");
   container.innerHTML = "";
 
@@ -92,7 +92,10 @@ export const displayBackpack = (hero) => {
     dropButton.addEventListener("click", () => {
       const i = hero.bag.indexOf(item);
       hero.bag.splice(i, 1);
+      
+      const currTile = hero.location
       currTile.objects.push(item)
+
       displayTileProps(hero)      
       displayBackpack(hero);
     });

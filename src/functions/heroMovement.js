@@ -1,3 +1,5 @@
+import { displayBackpack } from "./displayStats";
+
 // place hero name on first square on startup
 export const placeHero = (hero) => {
   const square = document.getElementById(hero.location.id)

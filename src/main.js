@@ -98,6 +98,7 @@ keys.forEach(key => {
     resetTiles();
     updateHeroLocation(newTileId, world, hero)
     placeHero(hero)
+    displayBackpack(hero)
     displayTileProps(hero);
   })
 })
