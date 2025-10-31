@@ -33,6 +33,11 @@ export const displayTileProps = (hero) => {
       const pickUpButton = document.createElement("button");
       pickUpButton.innerHTML = "pick up item";
 
+      if(hero.bag.length >= 3 ){
+        pickUpButton.classList.add("disabled-button")
+        pickUpButton.setAttribute("disabled", "")
+      }
+
       pickUpButton.addEventListener("click", () => {
         hero.bag.push(item);
 
@@ -70,7 +75,7 @@ export const displayBackpack = (hero) => {
   const currTile = hero.location;
   const container = document.getElementById("backpack");
   container.innerHTML = "";
-  
+
   const heading = document.createElement("h3");
   heading.innerHTML = `Backpack: ${hero.bag.length} / 3 items`;
 

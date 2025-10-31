@@ -5,14 +5,12 @@ when displaying tile props, add button to pick up item to each item
 
 add counter on how many items the user has in backpack
 
+remove "want to trade objects button"
+
 
 CONTINUE
 
-add message to tell the user to only pick up three items, when trying to pick up a forth
-
-
-
-remove "want to trade objects button"
+add popover to pick up button that says "You can only pick up 3 items"
 
 refactor "creating elements" code to one or several functions
 
