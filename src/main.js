@@ -9,7 +9,7 @@ import './style.scss'
 const worldElement = document.getElementById("world")
 
 //hero icon url
-let heroIconUrl = "./src/assets/images/flower.png" //change url when freepik works again
+let heroIconUrl = "./src/assets/images/knight.png"
 
 //there must be better way to do this
 let world = new World([])

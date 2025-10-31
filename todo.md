@@ -1,18 +1,15 @@
-skapa class för world, miljö, hero, villain
+when displaying tile props, add button to pick up item to each item
 
-world: innehåller ett rutnät av miljöer. en lista med listor (y axeln är index 0-..., x axeln blir i varje lista index 0-...)
+when displaying backpack, add button to drop item to each item
 
-miljö: blir en hard coded ruta, har properties som underlag, 
+add message to tell the user to only pick up three items, when trying to pick up a forth
 
-hero: liv, styrka, "ryggsäck"
+add counter on how many items the user has in backpack
 
-villain: ...
+remove "want to trade objects button"
 
-UI: dela upp sidan i tre containers, left middle right.
-middle är spelplanen.
-left är additional info, right är ryggsäck, liv etc
+refactor "creating elements" code to one or several functions
 
-under key-container lägg till html för knappar som uppdateras, typ "vill du ta upp objektet?"
+make strength go down when stepping on water tile
 
-clean up main.js by separating functions based on what they affect (worldbuilding, stats displaying, hero movement)
-
+create a start tile, safe to stand on
