@@ -53,7 +53,6 @@ const createWorld = () => {
   world = new World([[tile1, tile2, tile3], [tile4, tile5, tile6], [tile7, tile8, tile9]])
   hero.location = world.land[0][0]
   resetTiles();
-  console.log(world)
 }
 
 //render world with tiles
@@ -84,24 +83,24 @@ const resetTiles = () => {
  * adjust to accustom several objects on tile and to let the user choose
  * which object to trade
  */
-export const tradeObjects = (container, tile) => {
-  const div = document.createElement("div");
-  div.innerHTML = "Want to trade objects?"
-  const button = document.createElement("button")
-  button.innerHTML = "Trade"
-  button.addEventListener("click", () => {
-    const tileObject = tile.objects
-    const heroObject = hero.bag[0]
+// export const tradeObjects = (container, tile) => {
+//   const div = document.createElement("div");
+//   div.innerHTML = "Want to trade objects?"
+//   const button = document.createElement("button")
+//   button.innerHTML = "Trade"
+//   button.addEventListener("click", () => {
+//     const tileObject = tile.objects
+//     const heroObject = hero.bag[0]
 
-    tile.objects = heroObject
-    hero.bag.splice(0,1)
-    hero.bag.push(tileObject)
-    displayBackpack(hero)
-    displayTileProps(hero)
-  });
-  container.appendChild(div)
-  container.appendChild(button)
-}
+//     tile.objects = heroObject
+//     hero.bag.splice(0,1)
+//     hero.bag.push(tileObject)
+//     displayBackpack(hero)
+//     displayTileProps(hero)
+//   });
+//   container.appendChild(div)
+//   container.appendChild(button)
+// }
 
 const upKey = document.getElementById("up-key")
 const rightKey = document.getElementById("right-key")

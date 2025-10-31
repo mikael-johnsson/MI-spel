@@ -13,3 +13,4 @@ refactor "creating elements" code to one or several functions
 make strength go down when stepping on water tile
 
 create a start tile, safe to stand on
+

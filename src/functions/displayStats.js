@@ -1,4 +1,4 @@
-import { tradeObjects } from "../main";
+// import { tradeObjects } from "../main";
 
 /**
  * Displays tiles surface and plant on screen
@@ -28,7 +28,6 @@ export const displayTileProps = (hero) => {
     container.appendChild(object)
   }
 
-  tradeObjects(container, tile)
 }
 
 /**
@@ -57,8 +56,22 @@ export const displayBackpack = (hero) => {
   container.appendChild(heading)
 
   hero.bag.forEach(item => {
-    const div = document.createElement("div")
-    div.innerHTML = item;
-    container.appendChild(div)
+    const row = document.createElement("div")
+    const itemDiv = document.createElement("span")
+    itemDiv.innerHTML = item;
+
+    const dropButton = document.createElement("button")
+    dropButton.innerHTML = "drop item"
+
+    dropButton.addEventListener("click", () => {
+      const i = hero.bag.indexOf(item);
+      hero.bag.splice(i, 1)
+      displayBackpack(hero)
+    });
+
+    
+    row.appendChild(itemDiv)
+    row.appendChild(dropButton)
+    container.appendChild(row)
   });
 }
