@@ -76,32 +76,6 @@ const resetTiles = () => {
 });
 }
 
-/**
- * 
- * @param {*} container container element that shows tile properties
- * @param {*} tile tile object the hero stands on
- * adjust to accustom several objects on tile and to let the user choose
- * which object to trade
- */
-// export const tradeObjects = (container, tile) => {
-//   const div = document.createElement("div");
-//   div.innerHTML = "Want to trade objects?"
-//   const button = document.createElement("button")
-//   button.innerHTML = "Trade"
-//   button.addEventListener("click", () => {
-//     const tileObject = tile.objects
-//     const heroObject = hero.bag[0]
-
-//     tile.objects = heroObject
-//     hero.bag.splice(0,1)
-//     hero.bag.push(tileObject)
-//     displayBackpack(hero)
-//     displayTileProps(hero)
-//   });
-//   container.appendChild(div)
-//   container.appendChild(button)
-// }
-
 const upKey = document.getElementById("up-key")
 const rightKey = document.getElementById("right-key")
 const downKey = document.getElementById("down-key")
