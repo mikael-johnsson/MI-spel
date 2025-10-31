@@ -70,8 +70,10 @@ export const displayBackpack = (hero) => {
   const currTile = hero.location;
   const container = document.getElementById("backpack");
   container.innerHTML = "";
+  
   const heading = document.createElement("h3");
-  heading.innerHTML = "Backpack";
+  heading.innerHTML = `Backpack: ${hero.bag.length} / 3 items`;
+
   container.appendChild(heading);
 
   hero.bag.forEach((item) => {
