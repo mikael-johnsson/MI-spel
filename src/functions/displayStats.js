@@ -34,7 +34,6 @@ export const displayTileProps = (hero) => {
       pickUpButton.innerHTML = "pick up item";
 
       pickUpButton.addEventListener("click", () => {
-        // console.log("test")
         hero.bag.push(item);
 
         const i = tile.objects.indexOf(item);
@@ -68,6 +67,7 @@ export const displayHealth = (hero) => {
  * loop through the bag and display on screen
  */
 export const displayBackpack = (hero) => {
+  const currTile = hero.location;
   const container = document.getElementById("backpack");
   container.innerHTML = "";
   const heading = document.createElement("h3");
@@ -85,6 +85,8 @@ export const displayBackpack = (hero) => {
     dropButton.addEventListener("click", () => {
       const i = hero.bag.indexOf(item);
       hero.bag.splice(i, 1);
+      currTile.objects.push(item)
+      displayTileProps(hero)      
       displayBackpack(hero);
     });
 

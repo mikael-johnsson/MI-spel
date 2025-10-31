@@ -1,10 +1,12 @@
 DONE
 when displaying backpack, add button to drop item to each item
 
+when displaying tile props, add button to pick up item to each item
+
 
 CONTINUE
 
-when displaying tile props, add button to pick up item to each item
+
 
 add message to tell the user to only pick up three items, when trying to pick up a forth
 
