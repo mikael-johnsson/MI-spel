@@ -100,7 +100,8 @@ const leftKey = document.getElementById("left-key");
 const keys = [upKey, rightKey, downKey, leftKey];
 
 /**
- * add eventlisteners to movement keys and update heros location on screen
+ * add eventlisteners to movement keys and update heros and villains
+ * location on screen
  * if more columns are added, buttons data-movement attr must be updated
  */
 keys.forEach((key) => {

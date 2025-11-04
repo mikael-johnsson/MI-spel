@@ -1,4 +1,5 @@
-// place hero name on first square on startup
+// place hero or villain icon on their respective starting square on startup
+// and then there new squares on movement
 export const placePerson = (person) => {
   const square = document.getElementById(person.location.id);
   let icon = document.createElement("img");
@@ -8,7 +9,7 @@ export const placePerson = (person) => {
   square.appendChild(icon);
 };
 
-//update hero objects location property based on new tile id
+//update hero and villain objects location property based on new tile id
 export const updatePersonLocation = (newId, world, person) => {
   let newTile;
   world.land.forEach((row) => {
@@ -21,10 +22,13 @@ export const updatePersonLocation = (newId, world, person) => {
   person.location = newTile;
 };
 
+/**
+ * generate random villain movement based on key buttons
+ * @returns a random number to represent a villain key click
+ */
 export const moveVillain = () => {
-  const movement = [1, -1, 3, -3, 0];
-  const randomNum = Math.floor(Math.random() * 5);
+  const movement = [1, -1, 3, -3];
+  const randomNum = Math.floor(Math.random() * 4);
   const villainMovement = movement[randomNum];
-  console.log("this is villain movement: ", villainMovement);
   return villainMovement;
 };
